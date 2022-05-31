@@ -1,0 +1,128 @@
+:root {
+    --main-color: rgb(189, 59, 59);
+    --dark: #3C3C3C;
+}
+
+*, 
+*::after, 
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--dark);
+}
+.loader-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--main-color);
+    border-radius: 500px;
+    position: relative;
+    animation: 4s linear 0s infinite turnInfinite;
+
+}
+.loader::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 500px;
+    border: 3px solid var(--dark);
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+}
+.loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 500px;
+    border: 3px solid var(--dark);
+    right: 0;
+    top: -15px;
+    background-color: var(--main-color);
+}
+
+.inner-loader {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--main-color);
+    border-radius: 500px;
+    position: relative;
+    animation: 3s linear 0s infinite turnInfinite;
+    margin-left: -125px;
+}
+.inner-loader::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 500px;
+    border: 3px solid var(--dark);
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+}
+.inner-loader::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 500px;
+    border: 3px solid var(--dark);
+    right: 0;
+    bottom: -5px;
+    background-color: var(--main-color);
+}
+
+.inner-loader2 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--main-color);
+    border-radius: 500px;
+    position: relative;
+    animation: 3s linear 0s infinite turnInfinite;
+    margin-left: -75px;
+}
+.inner-loader2::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 500px;
+    border: 3px solid var(--dark);
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+}
+.inner-loader2::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 500px;
+    border: 3px solid var(--dark);
+    right: 0;
+    bottom: -5px;
+    background-color: var(--main-color);
+}
+
+@keyframes turnInfinite {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }    
+}
